@@ -1,0 +1,9 @@
+﻿################################################################################
+# Diese .gitignore-Datei wurde von Microsoft(R) Visual Studio automatisch erstellt.
+################################################################################
+
+/.vs/EllipseTestProgram/v14
+/EllipseTestProgram/bin/Debug
+/EllipseTestProgram/obj/Debug
+/EllipseTestProgram.Tests/bin/Debug
+/EllipseTestProgram.Tests/obj/Debug
