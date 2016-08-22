@@ -1,0 +1,115 @@
+﻿<Window x:Class="EllipseTestProgram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:loc="clr-namespace:EllipseTestProgram"
+        xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        Title="Ellipse test program" Height="700" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Menu>
+            <MenuItem Header="New">
+                <MenuItem Header="New ellipse" Click="On_NewEllipse_Clicked"/>
+            </MenuItem> 
+            <MenuItem Header="About" Click="On_MenuItemAbout_Clicked" />
+        </Menu>
+        
+        <Grid Grid.Row="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <loc:EllipseCanvas x:Name="ellipseCanvas" />
+
+            
+            
+            <Grid Grid.Column="1" Background="Wheat">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions> 
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                
+                <GroupBox Header="Scaling" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Content="ScaleX:" />
+                        <wpfTool:SingleUpDown x:Name="spinnerScaleX" Grid.Column="1" Minimum="0"  Increment="0.5" Value="1" />
+                        <Label Grid.Row="1" Content="ScaleY:" />
+                        <wpfTool:SingleUpDown x:Name="spinnerScaleY" Grid.Column="1" Grid.Row="1" Minimum="0"  Increment="0.5" Value="1"/>
+                        
+                        <Button Content="Apply" Grid.Row="2" Grid.Column="1" Click="On_ButtonApplyScale_Clicked"/>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="Translating" Grid.Row="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Content="TranslateX:" />
+                        <wpfTool:SingleUpDown x:Name="spinnerTranslateX" Grid.Column="1" Increment="1" Value="0" />
+                        <Label Content="TranslateY:" Grid.Row="1"/>
+                        <wpfTool:SingleUpDown x:Name="spinnerTranslateY" Grid.Column="1" Grid.Row="1" Value="0"/>
+                        <RepeatButton Grid.Row="2" Grid.Column="1" Content="Apply" Click="On_ButtonApplyTranslation_Clicked" />
+                    </Grid>
+                   
+                </GroupBox>
+                <GroupBox Header="Mirroring" Grid.Row="2">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        
+                        <Button Content="Mirror X" Click="On_ButtonMirrorX_Clicked"/>
+                        <Button Grid.Row="1" Content="Mirror Y" Click="On_ButtonMirrorY_Clicked"/>
+                        
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="Rotating" Grid.Row="3">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Angle [degrees]:" />
+                        <wpfTool:SingleUpDown Grid.Column="1" x:Name="spinnerRotationAngle" Minimum="-360" Maximum="360" Increment="1" Value="0"/>
+                        <RepeatButton Content="Apply" Grid.Row="1" Grid.Column="1" Click="On_ButtonApplyRotation_Clicked" />
+                    </Grid>
+                </GroupBox>
+                
+            </Grid>
+
+        </Grid>
+        
+        
+    </Grid>
+</Window>

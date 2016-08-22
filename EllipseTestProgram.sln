@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllipseTestProgram", "EllipseTestProgram\EllipseTestProgram.csproj", "{E16DCA65-2FF1-410C-8A72-7188A7AC5745}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllipseTestProgram.Tests", "EllipseTestProgram.Tests\EllipseTestProgram.Tests.csproj", "{E096869B-FE81-4F76-BE8A-EA8C1CD091E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E16DCA65-2FF1-410C-8A72-7188A7AC5745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E16DCA65-2FF1-410C-8A72-7188A7AC5745}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E16DCA65-2FF1-410C-8A72-7188A7AC5745}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E16DCA65-2FF1-410C-8A72-7188A7AC5745}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E096869B-FE81-4F76-BE8A-EA8C1CD091E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E096869B-FE81-4F76-BE8A-EA8C1CD091E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E096869B-FE81-4F76-BE8A-EA8C1CD091E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E096869B-FE81-4F76-BE8A-EA8C1CD091E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

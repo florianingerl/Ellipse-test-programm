@@ -1,0 +1,42 @@
+﻿<Window x:Class="EllipseTestProgram.NewEllipseDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NewEllipseDialog" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Grid.Column="1" Content="x" />
+        <Label Grid.Column="2" Content="y" />
+        
+        <Label Grid.Row="1" Content="Middle point:" />
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbMiddlePointX" Text="{Binding Path=MiddlePoint.X, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Grid.Row="1" Grid.Column="2" x:Name="tbMiddlePointY" Text="{Binding Path=MiddlePoint.Y, UpdateSourceTrigger=PropertyChanged}" />
+        
+        <Label Grid.Row="2" Content="Radius:" />
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="tbRadiusX" Text="{Binding Path=RadiusX, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Grid.Row="2" Grid.Column="2" x:Name="tbRadiusY" Text="{Binding Path=RadiusY, UpdateSourceTrigger=PropertyChanged}"/>
+        
+        <Label Grid.Row="3" Content="Start angle [degrees]:" />
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="tbStartAngle" Text="{Binding Path=StartAngleDeg, UpdateSourceTrigger=PropertyChanged}" />
+        <Label Grid.Row="4" Content="Delta angle [degrees]:" />
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="tbDeltaAngle" Text="{Binding Path=DeltaAngleDeg, UpdateSourceTrigger=PropertyChanged}" />
+        
+        <Button Grid.Row="6" Grid.Column="1" Content="Ok" Click="On_ButtonOk_Clicked" />
+        <Button Grid.Row="6" Grid.Column="2" Content="Cancel" Click="On_ButtonCancel_Clicked" />
+        
+    </Grid>
+</Window>
